@@ -1,6 +1,6 @@
 # 12306接口
 
-  1.验证码生成接口
+1. 验证码生成接口
 
   * Request Method: GET
 
@@ -21,7 +21,7 @@
         
   * Response: 验证码图片
 
-  2. 验证码判断接口
+2. 验证码判断接口
 
   * Request Method: GET
 
