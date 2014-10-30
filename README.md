@@ -16,6 +16,7 @@
         - BIGipServerotn    首次访问服务器设置的cookie 
 * Response: 验证码图片
 
+
 2. 验证码判断接口
 
 * Request Method: GET
