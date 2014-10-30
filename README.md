@@ -1,6 +1,6 @@
 # 12306接口
 
-1. 验证码生成接口
+1. 验证码生成接口  
 
 * Request Method: GET
 * Request URL: https://kyfw.12306.cn/otn/passcodeNew/getPassCodeNew
