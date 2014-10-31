@@ -3,7 +3,9 @@
 1. 验证码生成接口
 
     * Request Method: GET
+    
     * Request URL: https://kyfw.12306.cn/otn/passcodeNew/getPassCodeNew
+    
     * Query String Parameters: module=**login**&rand=**sjrand**&**0.5099291640799493**  
     说明：
       - module  值固定为login
@@ -14,6 +16,7 @@
     说明：
       - JSESSIONID        首次访问服务器设置的cookie
       - BIGipServerotn    首次访问服务器设置的cookie
+   
  * Response: 验证码图片
 
 2. 验证码判断接口
