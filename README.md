@@ -4,8 +4,7 @@
 
     * Request Method: GET
     * Request URL: https://kyfw.12306.cn/otn/passcodeNew/getPassCodeNew
-    * Query String Parameters:  
-    module=**login**&rand=**sjrand**&**0.5099291640799493**
+    * Query String Parameters:module=**login**&rand=**sjrand**&**0.5099291640799493**
     说明：
       - module  值固定为login
       - rand    值固定位sjrand
