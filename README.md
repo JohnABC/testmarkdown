@@ -23,7 +23,7 @@
 
 2. 验证码检查接口
 
-  * method: GET
+  * method: POST
   * url: https://kyfw.12306.cn/otn/passcodeNew/checkRandCodeAnsyn
   * parameters: 
     { randCode:表单验证码, rand:sjrand }  登录时rand=sjrand，提交订单时rand=randp
@@ -46,6 +46,66 @@
       "status":true,
       "httpstatus":200,
       "data":"Y",
+      "messages":[],
+      "validateMessages":{}
+   }
+   ```
+
+#### 登录接口
+
+1. 检查是否登录
+   * method: POST
+   * url: https://kyfw.12306.cn/otn/login/checkUser
+   * parameters:  
+   _json_att 值为空
+   
+   * response:
+   ```javascript
+   // 失败时：
+   {
+      "validateMessagesShowId":"_validatorMessage",
+      "status":true,
+      "httpstatus":200,
+      "data":{"flag":false},
+      "messages":[],
+      "validateMessages":{}
+   }
+   
+   // 成功时：
+   {
+      "validateMessagesShowId":"_validatorMessage",
+      "status":true,
+      "httpstatus":200,
+      "data":{"flag":true},
+      "messages":[],
+      "validateMessages":{}
+   }
+   ```
+
+2. 登录接口
+   * method: POST
+   * url: https://kyfw.12306.cn/otn/login/loginAysnSuggest
+   * parameters:  
+   { "loginUserDTO.user_name":用户名, "userDTO.password":密码, "randCode": 验证码 }
+   
+   * response:
+   ```javascript
+   // 失败时：
+   {
+      "validateMessagesShowId":"_validatorMessage",
+      "status":true,
+      "httpstatus":200,
+      "data":{},
+      "messages":["密码输入错误,您还有3次机会!"],
+      "validateMessages":{}
+   }
+   
+   // 成功时：
+   {
+      "validateMessagesShowId":"_validatorMessage",
+      "status":true,
+      "httpstatus":200,
+      "data":{"loginCheck":"Y"},
       "messages":[],
       "validateMessages":{}
    }
