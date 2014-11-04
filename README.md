@@ -110,3 +110,36 @@
       "validateMessages":{}
    }
    ```
+
+#### 余票查询接口
+   * method: GET
+   * url: https://kyfw.12306.cn/otn/lcxxcx/query
+   * parameters:  
+   `purpose_codes: ADULT&queryDate: 2014-10-24&from_station: BJP&to_station: NJH``
+   > purpose_codes   ADULT为成人票  0X00为学生票
+   > queryDate       出发日
+   > from_station
+   > to_station
+
+   * response:
+   ```javascript
+   // 失败时：
+   {
+      "validateMessagesShowId":"_validatorMessage",
+      "status":true,
+      "httpstatus":200,
+      "data":{},
+      "messages":["密码输入错误,您还有3次机会!"],
+      "validateMessages":{}
+   }
+   
+   // 成功时：
+   {
+      "validateMessagesShowId":"_validatorMessage",
+      "status":true,
+      "httpstatus":200,
+      "data":{"loginCheck":"Y"},
+      "messages":[],
+      "validateMessages":{}
+   }
+   ```
