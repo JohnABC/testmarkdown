@@ -6,10 +6,13 @@
     
     * Request URL: https://kyfw.12306.cn/otn/passcodeNew/getPassCodeNew
     
-    * Query String Parameters: module=**login**&rand=**sjrand**&**0.5099291640799493**  
+    * Query String Parameters:  
+      module=login&rand=sjrand&0.5099291640799493     登录时 
+      module=passenger&rand=randp&0.2637785451952368  提交订单时验证码            
+    
     说明：
-      - module  值固定为login
-      - rand    值固定位sjrand
+      - module  
+      - rand
       - 最后参数带上随机数字
 
  * Cookie:JSESSIONID=xxx;BIGipServerotn=xxx
