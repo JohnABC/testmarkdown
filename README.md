@@ -273,7 +273,6 @@
    * url: https://kyfw.12306.cn/otn/login/loginAysnSuggest
    * parameters:  
    `loginUserDTO.user_name=用户名&userDTO.password=密码&randCode=验证码`
-
    * response:
    ```javascript
    // 失败时：
@@ -303,7 +302,6 @@
    * url: https://kyfw.12306.cn/otn/leftTicket/log
    * parameters:  
    `leftTicketDTO.train_date=2014-11-04&leftTicketDTO.from_station=BJP&leftTicketDTO.to_station=HFH&purpose_codes=ADULT`
-
    * response:
    ```javascript
    // 成功
@@ -321,7 +319,6 @@
    * url: https://kyfw.12306.cn/otn/leftTicket/query
    * parameters:  
    `leftTicketDTO.train_date=2014-11-04&leftTicketDTO.from_station=BJP&leftTicketDTO.to_station=HFH&purpose_codes=ADULT`
-
    * response:
    ```javascript
    {
@@ -383,3 +380,95 @@
       "validateMessages": {}
    }
    ```
+
+  3. 列车沿途车站查询
+    * method: GET
+    * url: https://kyfw.12306.cn/otn/czxx/queryByTrainNo
+    * parameters:  
+    `train_no=2400000G2907&from_station_telecode=VNPto_station_telecode=HFH&depart_date=2014-11-04`
+
+    > train_no  列车全编号
+    > from_station_telecode 列车的起始站 (注意不是旅客的出发站) 
+    > to_station_telecode   列车的终点站
+    > depart_date           出发日期
+    * response:
+    ```javascript
+    {
+      "validateMessagesShowId": "_validatorMessage",
+      "status": true,
+      "httpstatus": 200,
+      "data": {
+          "data": [
+              {
+                  "start_station_name": "北京南",
+                  "arrive_time": "----",
+                  "station_train_code": "G29",    // 列车缩略号
+                  "station_name": "北京南",      
+                  "train_class_name": "高速",     // 列车种类名称
+                  "service_type": "1",        // 如果为0, 2, 4则无空调
+                  "start_time": "13:35",
+                  "stopover_time": "----",
+                  "end_station_name": "合肥",
+                  "station_no": "01",
+                  "isEnabled": true
+              },
+              {
+                  "arrive_time": "14:09",       // 到站时间
+                  "station_name": "天津南",      // 车站名
+                  "start_time": "14:11",        // 出发时间
+                  "stopover_time": "2分钟",     // 停留时间
+                  "station_no": "02",         // 站序
+                  "isEnabled": true         // 是否开通
+              },
+              {
+                  "arrive_time": "15:14",
+                  "station_name": "济南西",
+                  "start_time": "15:17",
+                  "stopover_time": "3分钟",
+                  "station_no": "03",
+                  "isEnabled": true
+              },
+              {
+                  "arrive_time": "17:25",
+                  "station_name": "合肥",
+                  "start_time": "17:25",
+                  "stopover_time": "----",
+                  "station_no": "04",
+                  "isEnabled": true
+              }
+          ]
+      },
+      "messages": [],
+      "validateMessages": {}
+    }
+    ```
+
+  4. 查询票价
+    * method: GET
+    * url:  
+      https://kyfw.12306.cn/otn/leftTicket/queryTicketPriceFL 
+      https://kyfw.12306.cn/otn/leftTicket/queryTicketPrice
+    * parameters:
+    `train_no=240000T1670N&from_station_no=01&to_station_no=03&seat_types=1413&train_date=2014-11-04`
+    > seat_types 由四2查询接口返回的seat_types的参数作为请求   1 硬座 (A1以元为单位)  3 硬卧 (A3以元为单位) 4 软卧 (A4以元为单位)
+    * response
+    ```javascript
+    {
+      "validateMessagesShowId": "_validatorMessage",
+      "status": true,
+      "httpstatus": 200,
+      "data": {
+          "1": "435",
+          "3": "945",
+          "4": "1415",
+          "A1": "¥43.5",
+          "A4": "¥141.5",
+          "A3": "¥94.5",
+          "OT": [],
+          "WZ": "¥43.5",
+          "train_no": "240000T1670N"
+      },
+      "messages": [],
+      "validateMessages": {}
+    }
+    ```
