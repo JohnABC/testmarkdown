@@ -3,23 +3,23 @@
 #### 验证码接口
 1. 验证码生成接口
 
-    * method: GET
-    * url: https://kyfw.12306.cn/otn/passcodeNew/getPassCodeNew
-    * parameters:  
+   * method: GET
+   * url: https://kyfw.12306.cn/otn/passcodeNew/getPassCodeNew
+   * parameters:  
       module=login&rand=sjrand&0.5099291640799493     登录时 
       module=passenger&rand=randp&0.2637785451952368  提交订单时验证码            
     
-    说明：
+   说明：
       - module  
       - rand
       - 最后参数带上随机数字
 
- * Cookie:JSESSIONID=xxx;BIGipServerotn=xxx
-    说明：
+   * Cookie:JSESSIONID=xxx;BIGipServerotn=xxx
+   说明：
       - JSESSIONID        首次访问服务器设置的cookie
       - BIGipServerotn    首次访问服务器设置的cookie
    
- * Response: 验证码图片
+   * Response: 验证码图片
 
 2. 验证码检查接口
 
@@ -188,23 +188,23 @@
 #### 验证码接口
 1. 验证码生成接口
 
-    * method: GET
-    * url: https://kyfw.12306.cn/otn/passcodeNew/getPassCodeNew
-    * parameters:  
+   * method: GET
+   * url: https://kyfw.12306.cn/otn/passcodeNew/getPassCodeNew
+   * parameters:  
       module=login&rand=sjrand&0.5099291640799493     登录时 
       module=passenger&rand=randp&0.2637785451952368  提交订单时验证码            
     
-    说明：
+   说明：
       - module  
       - rand
       - 最后参数带上随机数字
-
- * Cookie:JSESSIONID=xxx;BIGipServerotn=xxx
-    说明：
+   
+   * Cookie:JSESSIONID=xxx;BIGipServerotn=xxx
+   说明：
       - JSESSIONID        首次访问服务器设置的cookie
       - BIGipServerotn    首次访问服务器设置的cookie
    
- * Response: 验证码图片
+   * Response: 验证码图片
 
 2. 验证码检查接口
 
@@ -313,7 +313,7 @@
     "httpstatus":200,
     "messages":[],
     "validateMessages":{}
-  }
+   }
    ```
 
 2. 查询接口
@@ -324,11 +324,11 @@
 
    * response:
    ```javascript
-  {
-    "validateMessagesShowId": "_validatorMessage",
-    "status": true,
-    "httpstatus": 200,
-    "data": [
+   {
+      "validateMessagesShowId": "_validatorMessage",
+      "status": true,
+      "httpstatus": 200,
+      "data": [
         {
             "queryLeftNewDTO": {
                 "train_no": "2400000G2907",
@@ -377,9 +377,9 @@
             },
             "secretStr": "MjAxNC0xMS0wNCMwMCNHMjkjMDM6NTAjMTM6MzUjMjQwMDAwMEcyOTA3I1ZOUCNIRkgjMTc6MjUj5YyX5Lqs5Y2XI%2BWQiOiCpSMwMSMwNCNPMDQyNzUwMDAxTTA3MjA1MDA3NDkxMzUwNTAwMjYjUDMjMTQxNTA2OTIwMzExMSMxNDk0RUYzMzYzNjEyRURFMUYwMjNFOTRFRUU1RDEyNkZGN0YzRTdEQzc1QURGQTdDOTNCNjBDMA%3D%3D",
             "buttonTextInfo": "预订"
-        }
-    ],
-    "messages": [],
-    "validateMessages": {}
-  }
+         }
+      ],
+      "messages": [],
+      "validateMessages": {}
+   }
    ```
