@@ -319,6 +319,7 @@
    * url: https://kyfw.12306.cn/otn/leftTicket/query
    * parameters:  
    `leftTicketDTO.train_date=2014-11-04&leftTicketDTO.from_station=BJP&leftTicketDTO.to_station=HFH&purpose_codes=ADULT`
+   
    * response:
    ```javascript
    {
@@ -381,7 +382,7 @@
    }
    ```
 
-  3. 列车沿途车站查询
+3. 列车沿途车站查询
     * method: GET
     * url: https://kyfw.12306.cn/otn/czxx/queryByTrainNo
     * parameters:  
@@ -391,6 +392,7 @@
     > from_station_telecode 列车的起始站 (注意不是旅客的出发站) 
     > to_station_telecode   列车的终点站
     > depart_date           出发日期
+    
     * response:
     ```javascript
     {
