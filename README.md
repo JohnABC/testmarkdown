@@ -445,14 +445,16 @@
     }
     ```
 
-  4. 查询票价
+4. 查询票价
     * method: GET
     * url:  
       https://kyfw.12306.cn/otn/leftTicket/queryTicketPriceFL 
       https://kyfw.12306.cn/otn/leftTicket/queryTicketPrice
     * parameters:
     `train_no=240000T1670N&from_station_no=01&to_station_no=03&seat_types=1413&train_date=2014-11-04`
+    
     > seat_types 由四2查询接口返回的seat_types的参数作为请求   1 硬座 (A1以元为单位)  3 硬卧 (A3以元为单位) 4 软卧 (A4以元为单位)
+    
     * response
     ```javascript
     {
