@@ -111,6 +111,9 @@
    }
    ```
 
+3. 登录302的一个接口
+
+
 #### 余票查询接口
    * method: GET
    * url: https://kyfw.12306.cn/otn/lcxxcx/query
