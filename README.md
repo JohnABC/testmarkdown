@@ -327,19 +327,19 @@
         ],
         "normal_passengers": [
           {
-            "code": "1",
+            "code": "1",                   
             "passenger_name": "吴思泉",
             "sex_code": "M",
             "sex_name": "男",
             "born_date": "1985-08-29 00:00:00",
             "country_code": "CN",
-            "passenger_id_type_code": "1",
+            "passenger_id_type_code": "1",          
             "passenger_id_type_name": "二代身份证",
             "passenger_id_no": "340503198508290637",
-            "passenger_type": "1",
+            "passenger_type": "1",                        // 1 二代身份证  C 港澳通行证  G 台湾通行证 B 护照 
             "passenger_flag": "0",
             "passenger_type_name": "成人",
-            "mobile_no": "18500238337",
+            "mobile_no": "18500238337",     
             "phone_no": "",
             "email": "wsq19850829@163.com",
             "address": "",
