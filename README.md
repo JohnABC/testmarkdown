@@ -111,7 +111,7 @@
    }
    ```
 
-#### 车票预订相关接口
+#### 车票预订之查询
 1. 日志   （与2一起发送）
    * method: GET
    * url: https://kyfw.12306.cn/otn/leftTicket/log
@@ -294,14 +294,49 @@
       "validateMessages": {}
     }
     ```
+
+#### 预订车票
+1. 检查用户是否登录
+  * method: POST
+  * url: https://kyfw.12306.cn/otn/login/checkUser
+  * headers: 
+  `If-Modified-Since:0`
+  * parameters:
+  `_json_att=`
+  * response:
   ```javascript
-  // 省略两步
+  {
+    "validateMessagesShowId": "_validatorMessage",
+    "status": true,
+    "httpstatus": 200,
+    "data": {
+        "flag": true
+    },
+    "messages": [],
+    "validateMessages": {}
+  }
   ```
-  5. 获取乘客信息
+2. 发起预订车票
+  * method: POST
+  * url: https://kyfw.12306.cn/otn/leftTicket/submitOrderRequest
+  * parameter
+  `secretStr=xxx&train_date=2014-11-16&back_train_date=2014-11-20&tour_flag=dc&purpose_codes=ADULT&query_from_station_name=北京&query_to_station_name=南京&undefined`
+  * response:
+  ```javascript
+  {
+    "validateMessagesShowId": "_validatorMessage",
+    "status": true,
+    "httpstatus": 200,
+    "messages": [],
+    "validateMessages": {}
+  }
+  ```
+
+3. 获取乘客信息
     * method: POST
     * url: https://kyfw.12306.cn/otn/confirmPassenger/getPassengerDTOs 
     * parameters:
-    `_json_att=&REPEAT_SUBMIT_TOKEN=`
+    `_json_att=&REPEAT_SUBMIT_TOKEN=xxx`
     * response:
     ```javascript
     {
@@ -356,3 +391,41 @@
       "validateMessages": {}
     }
     ```
+#### 确认订单
+1. 检查验证码
+  * method: POST
+  * url: https://kyfw.12306.cn/otn/passcodeNew/checkRandCodeAnsyn
+  * parameters: 
+  `randCode=表单验证码&rand=randp&_json_att=&REPEAT_SUBMIT_TOKEN=toke码`
+  * response:
+   ```javascript
+   {
+      "validateMessagesShowId":"_validatorMessage",
+      "status":t  rue,
+      "httpstatus":200,
+      "data":"Y",
+      "messages":[],
+      "validateMessages":{}
+   }
+   ```
+2. 检查订单信息
+  * method: POST
+  * url: https://kyfw.12306.cn/otn/confirmPassenger/checkOrderInfo
+  * parameters:
+  `cancel_flag=2&bed_level_order_num=000000000000000000000000000000&passengerTicketStr=O%2C0%2C1%2C%E5%90%B4%E6%80%9D%E6%B3%89%2C1%2C340503198508290637%2C18500238337%2CN&oldPassengerStr=%E5%90%B4%E6%80%9D%E6%B3%89%2C1%2C340503198508290637%2C1_&tour_flag=dc&randCode=xxx&_json_att=&REPEAT_SUBMIT_TOKEN=xxx`
+  > cancel_flag 与 bed_level_order_num 的值固定
+  > passengerTicketStr:
+  > oldPassengerStr:
+  * response:
+  ```javascript
+  {
+    "validateMessagesShowId": "_validatorMessage",
+    "status": true,
+    "httpstatus": 200,
+    "data": {
+        "submitStatus": true
+    },
+    "messages": [],
+    "validateMessages": {}
+  }
+  ```
