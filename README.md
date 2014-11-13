@@ -175,18 +175,18 @@
                 "sale_time": "1400",                  // 出售时间
                 "is_support_card": "1",
                 "gg_num": "--",
-                "gr_num": "--",
-                "qt_num": "--",
-                "rw_num": "--",
-                "rz_num": "--",
-                "tz_num": "--",
-                "wz_num": "--",
+                "gr_num": "--",                       // 高级软卧 
+                "qt_num": "--",                       // 其他
+                "rw_num": "--",                       // 软卧
+                "rz_num": "--",                       // 软座
+                "tz_num": "--",                       // 特等座
+                "wz_num": "--",                       // 无座
                 "yb_num": "--",
-                "yw_num": "--",
-                "yz_num": "--",
-                "ze_num": "1",
-                "zy_num": "有",
-                "swz_num": "有"
+                "yw_num": "--",                       // 硬卧
+                "yz_num": "--",                       // 硬座
+                "ze_num": "1",                        // 二等座
+                "zy_num": "有",                       // 一等座
+                "swz_num": "有"                       // 商务座
             },
             "secretStr": "MjAxNC0xMS0wNCMwMCNHMjkjMDM6NTAjMTM6MzUjMjQwMDAwMEcyOTA3I1ZOUCNIRkgjMTc6MjUj5YyX5Lqs5Y2XI%2BWQiOiCpSMwMSMwNCNPMDQyNzUwMDAxTTA3MjA1MDA3NDkxMzUwNTAwMjYjUDMjMTQxNTA2OTIwMzExMSMxNDk0RUYzMzYzNjEyRURFMUYwMjNFOTRFRUU1RDEyNkZGN0YzRTdEQzc1QURGQTdDOTNCNjBDMA%3D%3D",
             "buttonTextInfo": "预订"
