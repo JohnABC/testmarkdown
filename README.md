@@ -294,3 +294,65 @@
       "validateMessages": {}
     }
     ```
+  ```javascript
+  // 省略两步
+  ```
+  5. 获取乘客信息
+    * method: POST
+    * url: https://kyfw.12306.cn/otn/confirmPassenger/getPassengerDTOs 
+    * parameters:
+    `_json_att=&REPEAT_SUBMIT_TOKEN=`
+    * response:
+    ```javascript
+    {
+      "validateMessagesShowId": "_validatorMessage",
+      "status": true,
+      "httpstatus": 200,
+      "data": {
+        "isExist": true,
+        "exMsg": "",
+        "two_isOpenClick": [
+          "93",
+          "95",
+          "97",
+          "99"
+        ],
+        "other_isOpenClick": [
+          "91",
+          "93",
+          "98",
+          "99",
+          "95",
+          "97"
+        ],
+        "normal_passengers": [
+          {
+            "code": "1",
+            "passenger_name": "吴思泉",
+            "sex_code": "M",
+            "sex_name": "男",
+            "born_date": "1985-08-29 00:00:00",
+            "country_code": "CN",
+            "passenger_id_type_code": "1",
+            "passenger_id_type_name": "二代身份证",
+            "passenger_id_no": "340503198508290637",
+            "passenger_type": "1",
+            "passenger_flag": "0",
+            "passenger_type_name": "成人",
+            "mobile_no": "18500238337",
+            "phone_no": "",
+            "email": "wsq19850829@163.com",
+            "address": "",
+            "postalcode": "",
+            "first_letter": "",
+            "recordCount": "1",
+            "total_times": "99",
+            "index_id": "0"
+          }
+        ],
+      "dj_passengers": []
+    },
+    "messages": [],
+    "validateMessages": {}
+  }
+    ```
