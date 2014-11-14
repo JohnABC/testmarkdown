@@ -415,9 +415,10 @@
   * parameters:
   `cancel_flag=2&bed_level_order_num=000000000000000000000000000000&passengerTicketStr=O%2C0%2C1%2C%E5%90%B4%E6%80%9D%E6%B3%89%2C1%2C340503198508290637%2C18500238337%2CN&oldPassengerStr=%E5%90%B4%E6%80%9D%E6%B3%89%2C1%2C340503198508290637%2C1_&tour_flag=dc&randCode=xxx&_json_att=&REPEAT_SUBMIT_TOKEN=xxx`
   
-  > cancel_flag 与 bed_level_order_num 的值固定
-  > passengerTicketStr: .seat_type + ",0," + .ticket_type + "," + .name + "," + .id_type + "," + .id_no + .phone_no + "N"  
+  > cancel_flag 与 bed_level_order_num 的值固定 
+  > passengerTicketStr: .seat_type + ",0," + .ticket_type + "," + .name + "," + .id_type + "," + .id_no + .phone_no + "N"                            座位编号,0,票类型,乘客名,证件类型,证件号,手机号码,保存常用联系人(Y或N)  
   > oldPassengerStr: .name + "," + .passenger_id_type_code + "," + passenger_id_no + "," + passenger_type + "_"
+                      乘客名,证件类型,证件号,乘客类型
   > tour_flag: dc(单程)
   
   * response:
