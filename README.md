@@ -409,7 +409,7 @@
       "validateMessages":{}
    }
    ```
-2. 检查订单信息
+2. 检查订单信息 (检查选择的乘客信息的合法性)
   * method: POST
   * url: https://kyfw.12306.cn/otn/confirmPassenger/checkOrderInfo
   * parameters:
@@ -429,6 +429,29 @@
     "httpstatus": 200,
     "data": {
         "submitStatus": true
+    },
+    "messages": [],
+    "validateMessages": {}
+  }
+  ```
+  
+3. 获取当前列车的剩余票数与排队人数
+  * method: POST
+  * url: https://kyfw.12306.cn/otn/confirmPassenger/getQueueCount
+  * parameters:
+  `train_date=Tue Nov 18 2014 00:00:00 GMT+0800 (China Standard Time)&train_no=240000G60310&stationTrainCode=G603&seatType=O&fromStationTelecode=BXPtoStationTelecode=SJP&leftTicket=O012850490M0206500869040750020&purpose_codes=00&_json_att=&REPEAT_SUBMIT_TOKEN=xxx`
+  * response:
+  ```javascript
+  {
+    "validateMessagesShowId": "_validatorMessage",
+    "status": true,
+    "httpstatus": 200,
+    "data": {
+        "count": "1",
+        "ticket": "O012850489M0206500869040750020",
+        "op_2": "false",
+        "countT": "0",
+        "op_1": "false"
     },
     "messages": [],
     "validateMessages": {}
