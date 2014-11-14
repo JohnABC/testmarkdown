@@ -391,6 +391,7 @@
       "validateMessages": {}
     }
     ```
+
 #### 确认订单
 1. 检查验证码
   * method: POST
@@ -413,9 +414,11 @@
   * url: https://kyfw.12306.cn/otn/confirmPassenger/checkOrderInfo
   * parameters:
   `cancel_flag=2&bed_level_order_num=000000000000000000000000000000&passengerTicketStr=O%2C0%2C1%2C%E5%90%B4%E6%80%9D%E6%B3%89%2C1%2C340503198508290637%2C18500238337%2CN&oldPassengerStr=%E5%90%B4%E6%80%9D%E6%B3%89%2C1%2C340503198508290637%2C1_&tour_flag=dc&randCode=xxx&_json_att=&REPEAT_SUBMIT_TOKEN=xxx`
+  
   > cancel_flag 与 bed_level_order_num 的值固定
-  > passengerTicketStr:
-  > oldPassengerStr:
+  > passengerTicketStr: .seat_type + ",0," + .ticket_type + "," + .name + "," + .id_type + "," + .id_no + .phone_no + "N"  
+  > oldPassengerStr: .name + "," + .passenger_id_type_code + "," + passenger_id_no + "," + passenger_type + "_"
+  > tour_flag: dc(单程)
   * response:
   ```javascript
   {
