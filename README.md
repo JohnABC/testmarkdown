@@ -110,6 +110,23 @@
       "validateMessages":{}
    }
    ```
+3. 获取登录用户信息
+  * method: POST
+  * url:  https://kyfw.12306.cn/otn/login/loginUserAsyn
+  * parameters:
+  `random=1415935440931`
+  * response:
+  {
+    "validateMessagesShowId": "_validatorMessage",
+    "status": true,
+    "httpstatus": 200,
+    "data": {
+      "username": "吴思泉",
+      "status": true
+    },
+    "messages": [],
+    "validateMessages": {}
+  }
 
 #### 车票预订之查询
 1. 日志   （与2一起发送）
