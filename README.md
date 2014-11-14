@@ -419,6 +419,7 @@
   > passengerTicketStr: .seat_type + ",0," + .ticket_type + "," + .name + "," + .id_type + "," + .id_no + .phone_no + "N"  
   > oldPassengerStr: .name + "," + .passenger_id_type_code + "," + passenger_id_no + "," + passenger_type + "_"
   > tour_flag: dc(单程)
+  
   * response:
   ```javascript
   {
