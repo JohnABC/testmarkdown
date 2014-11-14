@@ -116,6 +116,7 @@
   * parameters:
   `random=1415935440931`
   * response:
+  ```javascript
   {
     "validateMessagesShowId": "_validatorMessage",
     "status": true,
@@ -127,6 +128,7 @@
     "messages": [],
     "validateMessages": {}
   }
+  ```
 
 #### 车票预订之查询
 1. 日志   （与2一起发送）
