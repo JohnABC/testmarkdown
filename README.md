@@ -477,4 +477,89 @@
   }
   ```
 #### 确认订单
-1. 啊啊啊
+1. 确认订单排队
+  * method: POST
+  * url: https://kyfw.12306.cn/otn/confirmPassenger/confirmSingleForQueue
+  * parameters: 
+  > passengerTicketStr
+  > oldPassengerStr
+  > randCode
+  > purpose_codes=00
+  > key_check_isChange
+  > leftTicketStr
+  > train_location=P3
+  > _json_att
+  > REPEAT_SUBMIT_TOKEN
+  * response:
+  ```javascript
+ {
+    "validateMessagesShowId": "_validatorMessage",
+    "status": true,
+    "httpstatus": 200,
+    "data": {
+        "submitStatus": true
+    },
+    "messages": [],
+    "validateMessages": {}
+  }
+  ```
+2. queryOrderWaitTime
+  * method: GET
+  * url: https://kyfw.12306.cn/otn/confirmPassenger/queryOrderWaitTime
+  * parameters: 
+  `random=1415939886105&tourFlag=dc&_json_att=&REPEAT_SUBMIT_TOKEN=e01d5b39887ec5348e87525706582f2b`
+  * response:
+  ```javascript
+ // 第一次
+ {
+    "validateMessagesShowId": "_validatorMessage",
+    "status": true,
+    "httpstatus": 200,
+    "data": {
+        "queryOrderWaitTimeStatus": true,
+        "count": 0,
+        "waitTime": 4,
+        "requestId": 5938882285874015000,
+        "waitCount": 1,
+        "tourFlag": "dc",
+        "orderId": null
+    },
+    "messages": [],
+    "validateMessages": {}
+  }
+  
+  // 第二次
+  {
+    "validateMessagesShowId": "_validatorMessage",
+    "status": true,
+    "httpstatus": 200,
+    "data": {
+        "queryOrderWaitTimeStatus": true,
+        "count": 0,
+        "waitTime": -1,
+        "requestId": 5938882285874015000,
+        "waitCount": 0,
+        "tourFlag": "dc",
+        "orderId": "E752931597"
+    },
+    "messages": [],
+    "validateMessages": {}
+  }
+  ```
+3. 占位成功获取订单
+  * method: POST
+  * url: https://kyfw.12306.cn/otn/confirmPassenger/resultOrderForDcQueue
+  * parameters: 
+  `orderSequence_no=E752931597&_json_att=&REPEAT_SUBMIT_TOKEN=e01d5b39887ec5348e87525706582f2b`
+  * response:
+  ```javascript
+  {
+      "validateMessagesShowId": "_validatorMessage",
+      "status": true,
+      "httpstatus": 200,
+      "data": {
+          "submitStatus": true
+      },
+      "messages": [],
+      "validateMessages": {}
+  }
