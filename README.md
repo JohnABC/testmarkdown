@@ -392,7 +392,7 @@
     }
     ```
 
-#### 确认订单
+#### 提交订单
 1. 检查验证码
   * method: POST
   * url: https://kyfw.12306.cn/otn/passcodeNew/checkRandCodeAnsyn
@@ -457,3 +457,5 @@
     "validateMessages": {}
   }
   ```
+#### 确认订单
+1. 啊啊啊
