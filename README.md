@@ -113,7 +113,7 @@
 
 3. 登录302接口 Moved Temporarily   貌似不请求没问题吧
 	* method: POST
-	* url: https://kyfw.12306.cn/otn/login/loginAysnSuggest
+	* url: https://kyfw.12306.cn/otn/login/userLogin
 	* parameters:  
 		`_json_att=''`
 	* response:
