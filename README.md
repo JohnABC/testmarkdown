@@ -1,37 +1,37 @@
-# ÇÀÆ±½Ó¿Ú2014.11.23
+# æŠ¢ç¥¨æ¥å£2014.11.23
 
-#### ÑéÖ¤Âë½Ó¿Ú
-1. ÑéÖ¤ÂëÉú³É½Ó¿Ú
+#### éªŒè¯ç æ¥å£
+1. éªŒè¯ç ç”Ÿæˆæ¥å£
 
    * method: GET
    * url: https://kyfw.12306.cn/otn/passcodeNew/getPassCodeNew
    * parameters:  
-      module=login&rand=sjrand&0.5099291640799493     µÇÂ¼Ê± 
-      module=passenger&rand=randp&0.2637785451952368  Ìá½»¶©µ¥Ê±ÑéÖ¤Âë            
+      module=login&rand=sjrand&0.5099291640799493     ç™»å½•æ—¶ 
+      module=passenger&rand=randp&0.2637785451952368  æäº¤è®¢å•æ—¶éªŒè¯ç             
     
-   ËµÃ÷£º
+   è¯´æ˜ï¼š
       - module  
       - rand
-      - ×îºó²ÎÊı´øÉÏËæ»úÊı×Ö
+      - æœ€åå‚æ•°å¸¦ä¸Šéšæœºæ•°å­—
    
    * Cookie:JSESSIONID=xxx;BIGipServerotn=xxx
-   ËµÃ÷£º
-      - JSESSIONID        Ê×´Î·ÃÎÊ·şÎñÆ÷ÉèÖÃµÄcookie
-      - BIGipServerotn    Ê×´Î·ÃÎÊ·şÎñÆ÷ÉèÖÃµÄcookie
+   è¯´æ˜ï¼š
+      - JSESSIONID        é¦–æ¬¡è®¿é—®æœåŠ¡å™¨è®¾ç½®çš„cookie
+      - BIGipServerotn    é¦–æ¬¡è®¿é—®æœåŠ¡å™¨è®¾ç½®çš„cookie
    
-   * Response: ÑéÖ¤ÂëÍ¼Æ¬
+   * Response: éªŒè¯ç å›¾ç‰‡
 
-2. ÑéÖ¤Âë¼ì²é½Ó¿Ú
+2. éªŒè¯ç æ£€æŸ¥æ¥å£
 
   * method: POST
   * url: https://kyfw.12306.cn/otn/passcodeNew/checkRandCodeAnsyn
   * parameters: 
-  `randCode=±íµ¥ÑéÖ¤Âë&rand=sjrand`
-  > µÇÂ¼Ê±rand=sjrand Ìá½»¶©µ¥Ê±rand=randp
+  `randCode=è¡¨å•éªŒè¯ç &rand=sjrand`
+  > ç™»å½•æ—¶rand=sjrand æäº¤è®¢å•æ—¶rand=randp
 
   * response:
    ```javascript
-   // Ê§°ÜÊ±£º
+   // å¤±è´¥æ—¶ï¼š
    {
       "validateMessagesShowId":"_validatorMessage",
       "status":true,
@@ -41,7 +41,7 @@
       "validateMessages":{}
    }
    
-   // ³É¹¦Ê±£º
+   // æˆåŠŸæ—¶ï¼š
    {
       "validateMessagesShowId":"_validatorMessage",
       "status":true,
@@ -52,17 +52,17 @@
    }
    ```
 
-#### µÇÂ¼½Ó¿Ú
+#### ç™»å½•æ¥å£
 
-1. ¼ì²éÊÇ·ñµÇÂ¼
+1. æ£€æŸ¥æ˜¯å¦ç™»å½•
    * method: POST
    * url: https://kyfw.12306.cn/otn/login/checkUser
    * parameters:  
-   _json_att ÖµÎª¿Õ
+   _json_att å€¼ä¸ºç©º
    
    * response:
    ```javascript
-   // Ê§°ÜÊ±£º
+   // å¤±è´¥æ—¶ï¼š
    {
       "validateMessagesShowId":"_validatorMessage",
       "status":true,
@@ -72,7 +72,7 @@
       "validateMessages":{}
    }
    
-   // ³É¹¦Ê±£º
+   // æˆåŠŸæ—¶ï¼š
    {
       "validateMessagesShowId":"_validatorMessage",
       "status":true,
@@ -83,24 +83,24 @@
    }
    ```
 
-2. µÇÂ¼½Ó¿Ú
+2. ç™»å½•æ¥å£
    * method: POST
    * url: https://kyfw.12306.cn/otn/login/loginAysnSuggest
    * parameters:  
-   `loginUserDTO.user_name=ÓÃ»§Ãû&userDTO.password=ÃÜÂë&randCode=ÑéÖ¤Âë`
+   `loginUserDTO.user_name=ç”¨æˆ·å&userDTO.password=å¯†ç &randCode=éªŒè¯ç `
    * response:
    ```javascript
-   // Ê§°ÜÊ±£º
+   // å¤±è´¥æ—¶ï¼š
    {
       "validateMessagesShowId":"_validatorMessage",
       "status":true,
       "httpstatus":200,
       "data":{},
-      "messages":["ÃÜÂëÊäÈë´íÎó,Äú»¹ÓĞ3´Î»ú»á!"],
+      "messages":["å¯†ç è¾“å…¥é”™è¯¯,æ‚¨è¿˜æœ‰3æ¬¡æœºä¼š!"],
       "validateMessages":{}
    }
    
-   // ³É¹¦Ê±£º
+   // æˆåŠŸæ—¶ï¼š
    {
       "validateMessagesShowId":"_validatorMessage",
       "status":true,
@@ -111,18 +111,18 @@
    }
    ```
 
-3. µÇÂ¼302½Ó¿Ú Moved Temporarily   Ã²ËÆ²»ÇëÇóÃ»ÎÊÌâ°É
+3. ç™»å½•302æ¥å£ Moved Temporarily   è²Œä¼¼ä¸è¯·æ±‚æ²¡é—®é¢˜å§
 	* method: POST
 	* url: https://kyfw.12306.cn/otn/login/userLogin
 	* parameters:  
 		`_json_att=''`
 	* response:
 	```javascript
-	// ²»ÖØÒª
+	// ä¸é‡è¦
 	```	
 	
    
-4. »ñÈ¡µÇÂ¼ÓÃ»§ĞÅÏ¢
+4. è·å–ç™»å½•ç”¨æˆ·ä¿¡æ¯
   * method: POST
   * url:  https://kyfw.12306.cn/otn/login/loginUserAsyn
   * parameters:
@@ -134,7 +134,7 @@
     "status": true,
     "httpstatus": 200,
     "data": {
-      "username": "ÎâË¼Èª",
+      "username": "å´æ€æ³‰",
       "status": true
     },
     "messages": [],
@@ -142,15 +142,15 @@
   }
   ```
 
-#### ³µÆ±Ô¤¶©Ö®²éÑ¯
-1. ÈÕÖ¾   £¨Óë2Ò»Æğ·¢ËÍ£©
+#### è½¦ç¥¨é¢„è®¢ä¹‹æŸ¥è¯¢
+1. æ—¥å¿—   ï¼ˆä¸2ä¸€èµ·å‘é€ï¼‰
    * method: GET
    * url: https://kyfw.12306.cn/otn/leftTicket/log
    * parameters:  
    `leftTicketDTO.train_date=2014-11-04&leftTicketDTO.from_station=BJP&leftTicketDTO.to_station=HFH&purpose_codes=ADULT`
    * response:
    ```javascript
-   // ³É¹¦
+   // æˆåŠŸ
    {
     "validateMessagesShowId":"_validatorMessage",
     "status":true,
@@ -160,12 +160,15 @@
    }
    ```
 
-2. ²éÑ¯½Ó¿Ú
+2. æŸ¥è¯¢æ¥å£
    * method: GET
    * url: https://kyfw.12306.cn/otn/leftTicket/query
    * parameters:  
    `leftTicketDTO.train_date=2014-11-04&leftTicketDTO.from_station=BJP&leftTicketDTO.to_station=HFH&purpose_codes=ADULT`
    
+   * cookie:
+   `JSESSIONID=0A01D492602B7B6A35B4568DB33D3E9A709F652CE9; BIGipServerotn=2463367434.24610.0000; _jc_save_fromStation=%u5317%u4EAC%2CBJP; _jc_save_toStation=%u4E0A%u6D77%2CSHH; _jc_save_fromDate=2014-11-25; _jc_save_toDate=2014-11-24; _jc_save_wfdc_flag=dc` 
+   `2014-11-25æ—¥åŒ—äº¬åˆ°ä¸Šæµ·å•ç¨‹æ™®é€šç¥¨`
    * response:
    ```javascript
    {
@@ -178,13 +181,13 @@
                 "train_no": "2400000G2907",
                 "station_train_code": "G29",
                 "start_station_telecode": "VNP",
-                "start_station_name": "±±¾©ÄÏ",            
+                "start_station_name": "åŒ—äº¬å—",            
                 "end_station_telecode": "HFH",
-                "end_station_name": "ºÏ·Ê",
+                "end_station_name": "åˆè‚¥",
                 "from_station_telecode": "VNP",
-                "from_station_name": "±±¾©ÄÏ",
+                "from_station_name": "åŒ—äº¬å—",
                 "to_station_telecode": "HFH",
-                "to_station_name": "ºÏ·Ê",
+                "to_station_name": "åˆè‚¥",
                 "start_time": "13:35",
                 "arrive_time": "17:25",
                 "day_difference": "0",
@@ -192,55 +195,55 @@
                 "lishi": "03:50",
                 "canWebBuy": "Y",
                 "lishiValue": "230",
-                "yp_info": "O042750001M0720500749135050026",      // ÓàÆ±ĞÅÏ¢£¿
+                "yp_info": "O042750001M0720500749135050026",      // ä½™ç¥¨ä¿¡æ¯ï¼Ÿ
                 "control_train_day": "20201231",
                 "start_train_date": "20141104",
                 "seat_feature": "O3M393",               // 
                 "yp_ex": "O0M090",
                 "train_seat_feature": "3",                
-                "seat_types": "OM9",                  // O ÊÇ¶şµÈ×ù MÊÇÒ»µÈ×ù  9ÊÇÉÌÎñ×ù
+                "seat_types": "OM9",                  // O æ˜¯äºŒç­‰åº§ Mæ˜¯ä¸€ç­‰åº§  9æ˜¯å•†åŠ¡åº§
                 "location_code": "P3",
-                "from_station_no": "01",                // ³ö·¢Õ¾µã±àºÅ
-                "to_station_no": "04",                  // Ä¿µÄÕ¾µã±àºÅ
+                "from_station_no": "01",                // å‡ºå‘ç«™ç‚¹ç¼–å·
+                "to_station_no": "04",                  // ç›®çš„ç«™ç‚¹ç¼–å·
                 "control_day": 19,
-                "sale_time": "1400",                  // ³öÊÛÊ±¼ä
+                "sale_time": "1400",                  // å‡ºå”®æ—¶é—´
                 "is_support_card": "1",
                 "gg_num": "--",
-                "gr_num": "--",                       // ¸ß¼¶ÈíÎÔ 
-                "qt_num": "--",                       // ÆäËû
-                "rw_num": "--",                       // ÈíÎÔ
-                "rz_num": "--",                       // Èí×ù
-                "tz_num": "--",                       // ÌØµÈ×ù
-                "wz_num": "--",                       // ÎŞ×ù
+                "gr_num": "--",                       // é«˜çº§è½¯å§ 
+                "qt_num": "--",                       // å…¶ä»–
+                "rw_num": "--",                       // è½¯å§
+                "rz_num": "--",                       // è½¯åº§
+                "tz_num": "--",                       // ç‰¹ç­‰åº§
+                "wz_num": "--",                       // æ— åº§
                 "yb_num": "--",
-                "yw_num": "--",                       // Ó²ÎÔ
-                "yz_num": "--",                       // Ó²×ù
-                "ze_num": "1",                        // ¶şµÈ×ù
-                "zy_num": "ÓĞ",                       // Ò»µÈ×ù
-                "swz_num": "ÓĞ"                       // ÉÌÎñ×ù
+                "yw_num": "--",                       // ç¡¬å§
+                "yz_num": "--",                       // ç¡¬åº§
+                "ze_num": "1",                        // äºŒç­‰åº§
+                "zy_num": "æœ‰",                       // ä¸€ç­‰åº§
+                "swz_num": "æœ‰"                       // å•†åŠ¡åº§
             },
             "secretStr": "MjAxNC0xMS0wNCMwMCNHMjkjMDM6NTAjMTM6MzUjMjQwMDAwMEcyOTA3I1ZOUCNIRkgjMTc6MjUj5YyX5Lqs5Y2XI%2BWQiOiCpSMwMSMwNCNPMDQyNzUwMDAxTTA3MjA1MDA3NDkxMzUwNTAwMjYjUDMjMTQxNTA2OTIwMzExMSMxNDk0RUYzMzYzNjEyRURFMUYwMjNFOTRFRUU1RDEyNkZGN0YzRTdEQzc1QURGQTdDOTNCNjBDMA%3D%3D",
-            "buttonTextInfo": "Ô¤¶©"
+            "buttonTextInfo": "é¢„è®¢"
          }
       ],
       "messages": [],
       "validateMessages": {}
    }
    
-   // ÆäÖĞsecretStrÊÇbase64±àÂë£¬decode»¹Ô­¸ñÊ½ÈçÏÂ
-   // 2014-11-04#00#G29#03:50#13:35#2400000G2907#VNP#HFH#17:25#±±¾©ÄÏ#ºÏ·Ê#01#04#O042750001M0720500749135050026#P3#1415069203111#1494EF3363612EDE1F023E94EEE5D126FF7F3E7DC75ADFA7C93B60C0
+   // å…¶ä¸­secretStræ˜¯base64ç¼–ç ï¼Œdecodeè¿˜åŸæ ¼å¼å¦‚ä¸‹
+   // 2014-11-04#00#G29#03:50#13:35#2400000G2907#VNP#HFH#17:25#åŒ—äº¬å—#åˆè‚¥#01#04#O042750001M0720500749135050026#P3#1415069203111#1494EF3363612EDE1F023E94EEE5D126FF7F3E7DC75ADFA7C93B60C0
    ```
 
-3. ÁĞ³µÑØÍ¾³µÕ¾²éÑ¯
+3. åˆ—è½¦æ²¿é€”è½¦ç«™æŸ¥è¯¢
     * method: GET
     * url: https://kyfw.12306.cn/otn/czxx/queryByTrainNo
     * parameters:  
     `train_no=2400000G2907&from_station_telecode=VNPto_station_telecode=HFH&depart_date=2014-11-04`
 
-    > train_no  ÁĞ³µÈ«±àºÅ
-    > from_station_telecode ÁĞ³µµÄÆğÊ¼Õ¾ (×¢Òâ²»ÊÇÂÃ¿ÍµÄ³ö·¢Õ¾) 
-    > to_station_telecode   ÁĞ³µµÄÖÕµãÕ¾
-    > depart_date           ³ö·¢ÈÕÆÚ
+    > train_no  åˆ—è½¦å…¨ç¼–å·
+    > from_station_telecode åˆ—è½¦çš„èµ·å§‹ç«™ (æ³¨æ„ä¸æ˜¯æ—…å®¢çš„å‡ºå‘ç«™) 
+    > to_station_telecode   åˆ—è½¦çš„ç»ˆç‚¹ç«™
+    > depart_date           å‡ºå‘æ—¥æœŸ
     
     * response:
     ```javascript
@@ -251,37 +254,37 @@
       "data": {
           "data": [
               {
-                  "start_station_name": "±±¾©ÄÏ",
+                  "start_station_name": "åŒ—äº¬å—",
                   "arrive_time": "----",
-                  "station_train_code": "G29",    // ÁĞ³µËõÂÔºÅ
-                  "station_name": "±±¾©ÄÏ",      
-                  "train_class_name": "¸ßËÙ",     // ÁĞ³µÖÖÀàÃû³Æ
-                  "service_type": "1",        // Èç¹ûÎª0, 2, 4ÔòÎŞ¿Õµ÷
+                  "station_train_code": "G29",    // åˆ—è½¦ç¼©ç•¥å·
+                  "station_name": "åŒ—äº¬å—",      
+                  "train_class_name": "é«˜é€Ÿ",     // åˆ—è½¦ç§ç±»åç§°
+                  "service_type": "1",        // å¦‚æœä¸º0, 2, 4åˆ™æ— ç©ºè°ƒ
                   "start_time": "13:35",
                   "stopover_time": "----",
-                  "end_station_name": "ºÏ·Ê",
+                  "end_station_name": "åˆè‚¥",
                   "station_no": "01",
                   "isEnabled": true
               },
               {
-                  "arrive_time": "14:09",       // µ½Õ¾Ê±¼ä
-                  "station_name": "Ìì½òÄÏ",      // ³µÕ¾Ãû
-                  "start_time": "14:11",        // ³ö·¢Ê±¼ä
-                  "stopover_time": "2·ÖÖÓ",     // Í£ÁôÊ±¼ä
-                  "station_no": "02",         // Õ¾Ğò
-                  "isEnabled": true         // ÊÇ·ñ¿ªÍ¨
+                  "arrive_time": "14:09",       // åˆ°ç«™æ—¶é—´
+                  "station_name": "å¤©æ´¥å—",      // è½¦ç«™å
+                  "start_time": "14:11",        // å‡ºå‘æ—¶é—´
+                  "stopover_time": "2åˆ†é’Ÿ",     // åœç•™æ—¶é—´
+                  "station_no": "02",         // ç«™åº
+                  "isEnabled": true         // æ˜¯å¦å¼€é€š
               },
               {
                   "arrive_time": "15:14",
-                  "station_name": "¼ÃÄÏÎ÷",
+                  "station_name": "æµå—è¥¿",
                   "start_time": "15:17",
-                  "stopover_time": "3·ÖÖÓ",
+                  "stopover_time": "3åˆ†é’Ÿ",
                   "station_no": "03",
                   "isEnabled": true
               },
               {
                   "arrive_time": "17:25",
-                  "station_name": "ºÏ·Ê",
+                  "station_name": "åˆè‚¥",
                   "start_time": "17:25",
                   "stopover_time": "----",
                   "station_no": "04",
@@ -294,7 +297,7 @@
     }
     ```
 
-4. ²éÑ¯Æ±¼Û
+4. æŸ¥è¯¢ç¥¨ä»·
     * method: GET
     * url:  
       https://kyfw.12306.cn/otn/leftTicket/queryTicketPriceFL 
@@ -302,7 +305,7 @@
     * parameters:
     `train_no=240000T1670N&from_station_no=01&to_station_no=03&seat_types=1413&train_date=2014-11-04`
     
-    > seat_types ÓÉËÄ2²éÑ¯½Ó¿Ú·µ»ØµÄseat_typesµÄ²ÎÊı×÷ÎªÇëÇó   1 Ó²×ù (A1ÒÔÔªÎªµ¥Î»)  3 Ó²ÎÔ (A3ÒÔÔªÎªµ¥Î») 4 ÈíÎÔ (A4ÒÔÔªÎªµ¥Î»)
+    > seat_types ç”±å››2æŸ¥è¯¢æ¥å£è¿”å›çš„seat_typesçš„å‚æ•°ä½œä¸ºè¯·æ±‚   1 ç¡¬åº§ (A1ä»¥å…ƒä¸ºå•ä½)  3 ç¡¬å§ (A3ä»¥å…ƒä¸ºå•ä½) 4 è½¯å§ (A4ä»¥å…ƒä¸ºå•ä½)
     
     * response
     ```javascript
@@ -314,11 +317,11 @@
           "1": "435",
           "3": "945",
           "4": "1415",
-          "A1": "£¤43.5",
-          "A4": "£¤141.5",
-          "A3": "£¤94.5",
+          "A1": "ï¿¥43.5",
+          "A4": "ï¿¥141.5",
+          "A3": "ï¿¥94.5",
           "OT": [],
-          "WZ": "£¤43.5",
+          "WZ": "ï¿¥43.5",
           "train_no": "240000T1670N"
       },
       "messages": [],
@@ -326,8 +329,8 @@
     }
     ```
 
-#### Ô¤¶©³µÆ±
-1. ¼ì²éÓÃ»§ÊÇ·ñµÇÂ¼
+#### é¢„è®¢è½¦ç¥¨
+1. æ£€æŸ¥ç”¨æˆ·æ˜¯å¦ç™»å½•
   * method: POST
   * url: https://kyfw.12306.cn/otn/login/checkUser
   * headers: 
@@ -347,11 +350,11 @@
     "validateMessages": {}
   }
   ```
-2. ·¢ÆğÔ¤¶©³µÆ±
+2. å‘èµ·é¢„è®¢è½¦ç¥¨
   * method: POST
   * url: https://kyfw.12306.cn/otn/leftTicket/submitOrderRequest
   * parameter
-  `secretStr=xxx&train_date=2014-11-16&back_train_date=2014-11-20&tour_flag=dc&purpose_codes=ADULT&query_from_station_name=±±¾©&query_to_station_name=ÄÏ¾©&undefined`
+  `secretStr=xxx&train_date=2014-11-16&back_train_date=2014-11-20&tour_flag=dc&purpose_codes=ADULT&query_from_station_name=åŒ—äº¬&query_to_station_name=å—äº¬&undefined`
   * response:
   ```javascript
   {
@@ -363,7 +366,7 @@
   }
   ```
 
-3. »ñÈ¡³Ë¿ÍĞÅÏ¢
+3. è·å–ä¹˜å®¢ä¿¡æ¯
     * method: POST
     * url: https://kyfw.12306.cn/otn/confirmPassenger/getPassengerDTOs 
     * parameters:
@@ -394,17 +397,17 @@
         "normal_passengers": [
           {
             "code": "1",                   
-            "passenger_name": "ÎâË¼Èª",
+            "passenger_name": "å´æ€æ³‰",
             "sex_code": "M",
-            "sex_name": "ÄĞ",
+            "sex_name": "ç”·",
             "born_date": "1985-08-29 00:00:00",
             "country_code": "CN",
             "passenger_id_type_code": "1",          
-            "passenger_id_type_name": "¶ş´úÉí·İÖ¤",
+            "passenger_id_type_name": "äºŒä»£èº«ä»½è¯",
             "passenger_id_no": "340503198508290637",
-            "passenger_type": "1",                        // 1 ¶ş´úÉí·İÖ¤  C ¸Û°ÄÍ¨ĞĞÖ¤  G Ì¨ÍåÍ¨ĞĞÖ¤ B »¤ÕÕ 
+            "passenger_type": "1",                        // 1 äºŒä»£èº«ä»½è¯  C æ¸¯æ¾³é€šè¡Œè¯  G å°æ¹¾é€šè¡Œè¯ B æŠ¤ç…§ 
             "passenger_flag": "0",
-            "passenger_type_name": "³ÉÈË",
+            "passenger_type_name": "æˆäºº",
             "mobile_no": "18500238337",     
             "phone_no": "",
             "email": "wsq19850829@163.com",
@@ -423,12 +426,12 @@
     }
     ```
 
-#### Ìá½»¶©µ¥
-1. ¼ì²éÑéÖ¤Âë
+#### æäº¤è®¢å•
+1. æ£€æŸ¥éªŒè¯ç 
   * method: POST
   * url: https://kyfw.12306.cn/otn/passcodeNew/checkRandCodeAnsyn
   * parameters: 
-  `randCode=±íµ¥ÑéÖ¤Âë&rand=randp&_json_att=&REPEAT_SUBMIT_TOKEN=tokeÂë`
+  `randCode=è¡¨å•éªŒè¯ç &rand=randp&_json_att=&REPEAT_SUBMIT_TOKEN=tokeç `
   * response:
    ```javascript
    {
@@ -440,17 +443,17 @@
       "validateMessages":{}
    }
    ```
-2. ¼ì²é¶©µ¥ĞÅÏ¢ (¼ì²éÑ¡ÔñµÄ³Ë¿ÍĞÅÏ¢µÄºÏ·¨ĞÔ)
+2. æ£€æŸ¥è®¢å•ä¿¡æ¯ (æ£€æŸ¥é€‰æ‹©çš„ä¹˜å®¢ä¿¡æ¯çš„åˆæ³•æ€§)
   * method: POST
   * url: https://kyfw.12306.cn/otn/confirmPassenger/checkOrderInfo
   * parameters:
   `cancel_flag=2&bed_level_order_num=000000000000000000000000000000&passengerTicketStr=O%2C0%2C1%2C%E5%90%B4%E6%80%9D%E6%B3%89%2C1%2C340503198508290637%2C18500238337%2CN&oldPassengerStr=%E5%90%B4%E6%80%9D%E6%B3%89%2C1%2C340503198508290637%2C1_&tour_flag=dc&randCode=xxx&_json_att=&REPEAT_SUBMIT_TOKEN=xxx`
   
-  > cancel_flag Óë bed_level_order_num µÄÖµ¹Ì¶¨ 
-  > passengerTicketStr: .seat_type + ",0," + .ticket_type + "," + .name + "," + .id_type + "," + .id_no + .phone_no + "N"                            ×ùÎ»±àºÅ,0,Æ±ÀàĞÍ,³Ë¿ÍÃû,Ö¤¼şÀàĞÍ,Ö¤¼şºÅ,ÊÖ»úºÅÂë,±£´æ³£ÓÃÁªÏµÈË(Y»òN)  
+  > cancel_flag ä¸ bed_level_order_num çš„å€¼å›ºå®š 
+  > passengerTicketStr: .seat_type + ",0," + .ticket_type + "," + .name + "," + .id_type + "," + .id_no + .phone_no + "N"                            åº§ä½ç¼–å·,0,ç¥¨ç±»å‹,ä¹˜å®¢å,è¯ä»¶ç±»å‹,è¯ä»¶å·,æ‰‹æœºå·ç ,ä¿å­˜å¸¸ç”¨è”ç³»äºº(Yæˆ–N)  
   > oldPassengerStr: .name + "," + .passenger_id_type_code + "," + passenger_id_no + "," + passenger_type + "_"
-                      ³Ë¿ÍÃû,Ö¤¼şÀàĞÍ,Ö¤¼şºÅ,³Ë¿ÍÀàĞÍ
-  > tour_flag: dc(µ¥³Ì)
+                      ä¹˜å®¢å,è¯ä»¶ç±»å‹,è¯ä»¶å·,ä¹˜å®¢ç±»å‹
+  > tour_flag: dc(å•ç¨‹)
   
   * response:
   ```javascript
@@ -466,7 +469,7 @@
   }
   ```
   
-3. »ñÈ¡µ±Ç°ÁĞ³µµÄÊ£ÓàÆ±ÊıÓëÅÅ¶ÓÈËÊı
+3. è·å–å½“å‰åˆ—è½¦çš„å‰©ä½™ç¥¨æ•°ä¸æ’é˜Ÿäººæ•°
   * method: POST
   * url: https://kyfw.12306.cn/otn/confirmPassenger/getQueueCount
   * parameters:
@@ -490,12 +493,12 @@
 
   {"validateMessagesShowId":"_validatorMessage","status":true,"httpstatus":200,"data":{"count":"16","ticket":"O055300000M0933000639174800004","op_2":"false","countT":"0","op_1":"true"},"messages":[],"validateMessages":{}}
 
-  // Ä¿Ç°ÅÅ¶ÓÈËÊıÒÑ¾­³¬¹ıÓàÆ±ÕÅÊı£¬ÇëÄúÑ¡ÔñÆäËûÏ¯±ğ»ò³µ´Î
+  // ç›®å‰æ’é˜Ÿäººæ•°å·²ç»è¶…è¿‡ä½™ç¥¨å¼ æ•°ï¼Œè¯·æ‚¨é€‰æ‹©å…¶ä»–å¸­åˆ«æˆ–è½¦æ¬¡
   {"validateMessagesShowId":"_validatorMessage","status":true,"httpstatus":200,"data":{"count":"28","ticket":"O055300000M0933000579174800004","op_2":"true","countT":"0","op_1":"true"},"messages":[],"validateMessages":{}}
   
 
   /*
-    ¸ù¾İticketÈ¥¼ÆËãÊ£ÓàÆ±Êı
+    æ ¹æ®ticketå»è®¡ç®—å‰©ä½™ç¥¨æ•°
   function B(G, F) {
     rt = "";
     seat_1 = -1;
@@ -526,27 +529,27 @@
     }
     return rt
 }
-console.log(B("O055300000M0933000489174800002", "M")); // Ê£ÓàÒ»µÈ×ù
+console.log(B("O055300000M0933000489174800002", "M")); // å‰©ä½™ä¸€ç­‰åº§
 
-// Õâ¿éµÄÂß¼­  passengerInfo_js.js
+// è¿™å—çš„é€»è¾‘  passengerInfo_js.js
 $.ajax({url: ctx + "confirmPassenger/getQueueCount",type: "post",data: {train_date: new Date(orderRequestDTO.train_date.time).toString(),train_no: orderRequestDTO.train_no,stationTrainCode: orderRequestDTO.station_train_code,seatType: limit_tickets[0].seat_type,fromStationTelecode: orderRequestDTO.from_station_telecode,toStationTelecode: orderRequestDTO.to_station_telecode,leftTicket: ticketInfoForPassengerForm.queryLeftTicketRequestDTO.ypInfoDetail,purpose_codes: F,isCheckOrderInfo: G},dataType: "json",success: function(I) {
                         if (I.status) {
                             if (I.data.isRelogin == "Y") {
                                 window.location.href = ctx + "login/init?random=" + new Date().getTime()
                             }
                             var J = B(I.data.ticket, limit_tickets[0].seat_type).split(",");
-                            H = "±¾´ÎÁĞ³µ£¬Ê£Óà" + (limit_tickets[0].seat_type_name).split("£¨")[0] + "<strong>" + J[0] + "</strong>ÕÅ";
+                            H = "æœ¬æ¬¡åˆ—è½¦ï¼Œå‰©ä½™" + (limit_tickets[0].seat_type_name).split("ï¼ˆ")[0] + "<strong>" + J[0] + "</strong>å¼ ";
                             if (J.length > 1) {
-                                H += ",ÎŞ×ù<strong>" + J[1] + "</strong>ÕÅ"
+                                H += ",æ— åº§<strong>" + J[1] + "</strong>å¼ "
                             }
-                            H += "¡£";
+                            H += "ã€‚";
                             if (I.data.op_2 == "true") {
-                                H += '<font color="red">Ä¿Ç°ÅÅ¶ÓÈËÊıÒÑ¾­³¬¹ıÓàÆ±ÕÅÊı£¬ÇëÄúÑ¡ÔñÆäËûÏ¯±ğ»ò³µ´Î¡£</font>';
+                                H += '<font color="red">ç›®å‰æ’é˜Ÿäººæ•°å·²ç»è¶…è¿‡ä½™ç¥¨å¼ æ•°ï¼Œè¯·æ‚¨é€‰æ‹©å…¶ä»–å¸­åˆ«æˆ–è½¦æ¬¡ã€‚</font>';
                                 $("#qr_submit_id").hide()
                             } else {
                                 if (I.data.countT > 0) {
-                                    H += 'Ä¿Ç°ÅÅ¶ÓÈËÊı<font color="red">' + I.data.countT + "</font>ÈË£¬";
-                                    H += "<br/>ÇëÈ·ÈÏÒÔÉÏĞÅÏ¢ÊÇ·ñÕıÈ·£¬µã»÷¡°È·ÈÏ¡±ºó£¬ÏµÍ³½«ÎªÄúËæ»ú·ÖÅäÏ¯Î»¡£"
+                                    H += 'ç›®å‰æ’é˜Ÿäººæ•°<font color="red">' + I.data.countT + "</font>äººï¼Œ";
+                                    H += "<br/>è¯·ç¡®è®¤ä»¥ä¸Šä¿¡æ¯æ˜¯å¦æ­£ç¡®ï¼Œç‚¹å‡»â€œç¡®è®¤â€åï¼Œç³»ç»Ÿå°†ä¸ºæ‚¨éšæœºåˆ†é…å¸­ä½ã€‚"
                                 }
                             }
                             var K = $("#sy_ticket_num_id");
@@ -574,8 +577,8 @@ $.ajax({url: ctx + "confirmPassenger/getQueueCount",type: "post",data: {train_da
             }
   */
   ```
-#### È·ÈÏ¶©µ¥
-1. È·ÈÏ¶©µ¥ÅÅ¶Ó
+#### ç¡®è®¤è®¢å•
+1. ç¡®è®¤è®¢å•æ’é˜Ÿ
   * method: POST
   * url: https://kyfw.12306.cn/otn/confirmPassenger/confirmSingleForQueue
   * parameters: 
@@ -608,7 +611,7 @@ $.ajax({url: ctx + "confirmPassenger/getQueueCount",type: "post",data: {train_da
   `random=1415939886105&tourFlag=dc&_json_att=&REPEAT_SUBMIT_TOKEN=e01d5b39887ec5348e87525706582f2b`
   * response:
   ```javascript
- // µÚÒ»´Î
+ // ç¬¬ä¸€æ¬¡
  {
     "validateMessagesShowId": "_validatorMessage",
     "status": true,
@@ -626,7 +629,7 @@ $.ajax({url: ctx + "confirmPassenger/getQueueCount",type: "post",data: {train_da
     "validateMessages": {}
   }
   
-  // µÚ¶ş´Î
+  // ç¬¬äºŒæ¬¡
   {
     "validateMessagesShowId": "_validatorMessage",
     "status": true,
@@ -644,7 +647,7 @@ $.ajax({url: ctx + "confirmPassenger/getQueueCount",type: "post",data: {train_da
     "validateMessages": {}
   }
   ```
-3. Õ¼Î»³É¹¦»ñÈ¡¶©µ¥
+3. å ä½æˆåŠŸè·å–è®¢å•
   * method: POST
   * url: https://kyfw.12306.cn/otn/confirmPassenger/resultOrderForDcQueue
   * parameters: 
