@@ -124,9 +124,9 @@
    
 4. 获取登录用户信息
   * method: POST
-  * url:  https://kyfw.12306.cn/otn/login/loginUserAsyn
+  * url:  https://kyfw.12306.cn/otn/login/loginUserAsyn?random=1415935440931
   * parameters:
-  `random=1415935440931`
+  ``loginUserDTO.user_name=用户名&userDTO.password=密码&randCode=验证码``
   * response:
   ```javascript
   {
