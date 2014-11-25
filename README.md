@@ -191,7 +191,7 @@
                 "start_time": "13:35",
                 "arrive_time": "17:25",
                 "day_difference": "0",
-                "train_class_name": "",
+                "train_class_name": "",			// 这个时候返回的貌似是空字符串
                 "lishi": "03:50",
                 "canWebBuy": "Y",
                 "lishiValue": "230",
