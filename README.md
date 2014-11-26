@@ -198,10 +198,12 @@
                 "yp_info": "O042750001M0720500749135050026",      // 余票信息？
                 "control_train_day": "20201231",
                 "start_train_date": "20141104",
-                "seat_feature": "O3M393",               // 
+                "seat_feature": "O3M393",               // 这个值好像蛮准的
                 "yp_ex": "O0M090",
                 "train_seat_feature": "3",                
-                "seat_types": "OM9",                  // O 是二等座 M是一等座  9是商务座   1是硬座  3是硬卧  4是软卧
+                "seat_types": "OM9",                  // 请求票价时参数带上  
+                // 席位 9是商务座，P特等座，M一等座，O二等座，6高级软卧，4是软卧，3是硬卧，2是软座，1是硬座，0是无座       
+               	// 票价 A9是商务座，P特等座, M一等座, O二等座，A6高级软卧，A4软卧，A3硬卧，软座A2，A1硬座，WZ无座
                 "location_code": "P3",
                 "from_station_no": "01",                // 出发站点编号
                 "to_station_no": "04",                  // 目的站点编号
