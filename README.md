@@ -243,8 +243,8 @@
     `train_no=2400000G2907&from_station_telecode=VNPto_station_telecode=HFH&depart_date=2014-11-04`
 
     > train_no  列车全编号
-    > from_station_telecode 列车的起始站 (注意不是旅客的出发站) 
-    > to_station_telecode   列车的终点站
+    > from_station_telecode 出发站 (上次查询结果中每条数据的from_station_telecode) 
+    > to_station_telecode   目的站 (上次查询结果中每条数据的to_station_telecode) 
     > depart_date           出发日期
     
     * response:
