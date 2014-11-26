@@ -201,7 +201,7 @@
                 "seat_feature": "O3M393",               // 
                 "yp_ex": "O0M090",
                 "train_seat_feature": "3",                
-                "seat_types": "OM9",                  // O 是二等座 M是一等座  9是商务座
+                "seat_types": "OM9",                  // O 是二等座 M是一等座  9是商务座   1是硬座  3是硬卧  4是软卧
                 "location_code": "P3",
                 "from_station_no": "01",                // 出发站点编号
                 "to_station_no": "04",                  // 目的站点编号
