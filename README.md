@@ -583,17 +583,17 @@ $.ajax({url: ctx + "confirmPassenger/getQueueCount",type: "post",data: {train_da
 1. 确认订单排队
   * method: POST
   * url: https://kyfw.12306.cn/otn/confirmPassenger/confirmSingleForQueue
-  * parameters: 
+  * parameters:
   
-  > passengerTicketStr 
-  > oldPassengerStr 
-  > randCode 
-  > purpose_codes 
-  > key_check_isChange 
-  > leftTicketStr 
-  > train_location 
-  > _json_att 
-  > REPEAT_SUBMIT_TOKEN 
+  > passengerTicketStr  
+  > oldPassengerStr  
+  > randCode  
+  > purpose_codes  
+  > key_check_isChange   
+  > leftTicketStr   
+  > train_location   
+  > _json_att   
+  > REPEAT_SUBMIT_TOKEN   
 
   * response:
   ```javascript
