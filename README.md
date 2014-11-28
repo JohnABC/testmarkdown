@@ -584,6 +584,7 @@ $.ajax({url: ctx + "confirmPassenger/getQueueCount",type: "post",data: {train_da
   * method: POST
   * url: https://kyfw.12306.cn/otn/confirmPassenger/confirmSingleForQueue
   * parameters: 
+  
   > passengerTicketStr
   > oldPassengerStr
   > randCode
