@@ -50,7 +50,21 @@
       "messages":[],
       "validateMessages":{}
    }
+   
+   // 成功 2014/11/30 接口变动
+   {
+    "validateMessagesShowId": "_validatorMessage",
+    "status": true,
+    "httpstatus": 200,
+    "data": {
+        "result": "1",
+        "msg": "randCodeRight"
+    },
+    "messages": [],
+    "validateMessages": {}
+   }
    ```
+    
 
 #### 登录接口
 
