@@ -154,6 +154,19 @@
     "messages": [],
     "validateMessages": {}
   }
+ 
+  {
+    "validateMessagesShowId": "_validatorMessage",
+    "status": true,
+    "httpstatus": 200,
+    "data": {
+        "username": "吴思泉",
+        "status": true,
+        "notifysession": "N"
+    },
+    "messages": [],
+    "validateMessages": {}
+ }
   ```
 
 #### 车票预订之查询
@@ -371,6 +384,8 @@
   * url: https://kyfw.12306.cn/otn/leftTicket/submitOrderRequest
   * parameter
   `secretStr=xxx&train_date=2014-11-16&back_train_date=2014-11-20&tour_flag=dc&purpose_codes=ADULT&query_from_station_name=北京&query_to_station_name=南京&undefined`
+  
+  `NTE5NDkx=OWM3NDM4NjViOTJjZDZlMQ%3D%3D&myversion=undefined   2014-11-30日最前面增加两个参数`
   * response:
   ```javascript
   {
