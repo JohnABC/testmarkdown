@@ -402,6 +402,7 @@
     * url: https://kyfw.12306.cn/otn/confirmPassenger/getPassengerDTOs 
     * parameters:
     `_json_att=&REPEAT_SUBMIT_TOKEN=xxx`
+    `登录后获取用户常用联系人不用传参`
     * response:
     ```javascript
     {
@@ -433,12 +434,12 @@
             "sex_name": "男",
             "born_date": "1985-08-29 00:00:00",
             "country_code": "CN",
-            "passenger_id_type_code": "1",          
+            "passenger_id_type_code": "1",          	// 1 二代身份证  C 港澳通行证  G 台湾通行证 B 护照 
             "passenger_id_type_name": "二代身份证",
             "passenger_id_no": "340503198508290637",
-            "passenger_type": "1",                        // 1 二代身份证  C 港澳通行证  G 台湾通行证 B 护照 
+            "passenger_type": "1",                     // 成人
             "passenger_flag": "0",
-            "passenger_type_name": "成人",
+            "passenger_type_name": "成人",		
             "mobile_no": "18500238337",     
             "phone_no": "",
             "email": "wsq19850829@163.com",
