@@ -664,6 +664,23 @@ $.ajax({url: ctx + "confirmPassenger/getQueueCount",type: "post",data: {train_da
     "validateMessages": {}
   }
   
+  {
+    "validateMessagesShowId": "_validatorMessage",
+    "status": true,
+    "httpstatus": 200,
+    "data": {
+        "queryOrderWaitTimeStatus": true,
+        "count": -3,
+        "waitTime": 4,
+        "requestId": 5946284070704082000,
+        "waitCount": 1,
+        "tourFlag": "dc",
+        "orderId": null
+    },
+    "messages": [],
+    "validateMessages": {}
+}
+
   // 第二次
   {
     "validateMessagesShowId": "_validatorMessage",
@@ -681,6 +698,26 @@ $.ajax({url: ctx + "confirmPassenger/getQueueCount",type: "post",data: {train_da
     "messages": [],
     "validateMessages": {}
   }
+  
+  
+  {
+    "validateMessagesShowId": "_validatorMessage",
+    "status": true,
+    "httpstatus": 200,
+    "data": {
+        "queryOrderWaitTimeStatus": true,
+        "count": 0,
+        "waitTime": -2,
+        "requestId": 5946284070704082000,
+        "waitCount": 0,
+        "tourFlag": "dc",
+        "errorcode": "0",
+        "msg": "没有足够的票!",
+        "orderId": null
+    },
+    "messages": [],
+    "validateMessages": {}
+}
   ```
 3. 占位成功获取订单
   * method: POST
