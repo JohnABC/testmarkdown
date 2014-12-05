@@ -168,6 +168,11 @@
     "validateMessages": {}
  }
   ```
+ 5. 退出登录  302 Moved Temporarily
+   * method: GET
+   * url:  https://kyfw.12306.cn/otn/login/loginOut
+   * parameter:
+   * response
 
 #### 车票预订之查询
 1. 日志   （与2一起发送）
