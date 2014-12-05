@@ -500,6 +500,18 @@
     "messages": [],
     "validateMessages": {}
   }
+  
+  {
+    "validateMessagesShowId": "_validatorMessage",
+    "status": true,
+    "httpstatus": 200,
+    "data": {
+        "errMsg": "对不起，由于您取消次数过多，今日将不能继续受理您的订票请求。12月6日您可继续使用订票功能。",
+        "submitStatus": false
+    },
+    "messages": [],
+    "validateMessages": {}
+ }
   ```
   
 3. 获取当前列车的剩余票数与排队人数
