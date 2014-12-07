@@ -545,8 +545,8 @@
 
   // 目前排队人数已经超过余票张数，请您选择其他席别或车次
   {"validateMessagesShowId":"_validatorMessage","status":true,"httpstatus":200,"data":{"count":"28","ticket":"O055300000M0933000579174800004","op_2":"true","countT":"0","op_1":"true"},"messages":[],"validateMessages":{}}
-  
-
+  // 重复登录？
+{"validateMessagesShowId":"_validatorMessage","status":true,"httpstatus":200,"data":{"isRelogin":"Y"},"messages":[],"validateMessages":{}}
   /*
     根据ticket去计算剩余票数
   function B(G, F) {
