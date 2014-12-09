@@ -736,7 +736,7 @@ $.ajax({url: ctx + "confirmPassenger/getQueueCount",type: "post",data: {train_da
     "validateMessages": {}
 }
   ```
-3. 订票结果成功并获取订单
+3. 订票成功，确认结果
   * method: POST
   * url: https://kyfw.12306.cn/otn/confirmPassenger/resultOrderForDcQueue
   * parameters: 
