@@ -627,7 +627,7 @@ $.ajax({url: ctx + "confirmPassenger/getQueueCount",type: "post",data: {train_da
             }
   */
   ```
-#### 确认订单
+#### 确认订单  (这步成功95%成功，后面应该是看生成订单结果有没有出小问题 )
 1. 确认订单排队
   * method: POST
   * url: https://kyfw.12306.cn/otn/confirmPassenger/confirmSingleForQueue
@@ -656,7 +656,7 @@ $.ajax({url: ctx + "confirmPassenger/getQueueCount",type: "post",data: {train_da
     "validateMessages": {}
   }
   ```
-2. queryOrderWaitTime
+2. queryOrderWaitTime   ( 等待订单生成  )
   * method: GET
   * url: https://kyfw.12306.cn/otn/confirmPassenger/queryOrderWaitTime
   * parameters: 
@@ -736,7 +736,7 @@ $.ajax({url: ctx + "confirmPassenger/getQueueCount",type: "post",data: {train_da
     "validateMessages": {}
 }
   ```
-3. 占位成功获取订单
+3. 订票结果成功并获取订单
   * method: POST
   * url: https://kyfw.12306.cn/otn/confirmPassenger/resultOrderForDcQueue
   * parameters: 
