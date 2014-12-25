@@ -461,6 +461,15 @@
       "messages": [],
       "validateMessages": {}
     }
+    
+    // 有些乘车人是未通过验证的具体判断方法
+    var canBuy = function( id_type_code, total_times ) {
+    	if ( id_type_code == 1 ) {
+    	    // total_times在two_isOpenClick中出现则可以
+    	} else {
+    	    // total_times在other_isOpenClick中出现则可以
+    	}
+    } 
     ```
 
 #### 提交订单
